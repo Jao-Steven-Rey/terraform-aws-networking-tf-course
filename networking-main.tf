@@ -56,7 +56,7 @@ resource "aws_subnet" "module_subnet" {
   }
 
   tags = {
-    Name = "module_${each.key}"
+    Name      = "module_${each.key}"
     Publicity = each.value.public == true ? "public" : "private"
   }
 }
